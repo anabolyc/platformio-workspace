@@ -1,0 +1,17 @@
+#include "Arduino.h"
+
+uint8_t pins_count = 5;
+
+void setup() {
+    for(uint8_t pin = 0; pin < pins_count; pin++)
+        pinMode(pin, OUTPUT);
+}
+
+uint8_t state = 0;
+
+void loop() {
+    state++;
+    for(uint8_t pin = 0; pin < pins_count; pin++)
+        digitalWrite(pin, state % 2);
+    delay(500);
+}

@@ -1,0 +1,23 @@
+#include <Arduino.h>
+#include <util/delay.h>
+#include "SoftwareSerial.h"
+
+#define SERIAL_RX 7
+#define SERIAL_TX 3
+#define SENSOR_PN A2
+
+SoftwareSerial _Serial(SERIAL_RX, SERIAL_TX);
+
+void setup()
+{
+  _Serial.begin(115200);
+  _Serial.println(F("Hello, World!"));
+  pinMode(SENSOR_PN, INPUT);
+}
+
+void loop()
+{
+  uint8_t sens_value = analogRead(SENSOR_PN);
+  _Serial.println(sens_value );
+  _delay_ms(250);
+}

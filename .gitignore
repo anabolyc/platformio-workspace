@@ -1,0 +1,11 @@
+build
+
+./3-phase-motor-controller
+./atmel328-bath-night-light
+./atmel328-ir-volume-ctl
+./attiny-traffic-light
+./ina219-ssd1306-power-meter
+./pio-kitchen-light-driver
+
+./led_8_8_matrix/lib/LedControl/.git
+
